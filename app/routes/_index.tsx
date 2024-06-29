@@ -10,15 +10,27 @@ import {
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
-    { name: "description", content: "Welcome to Remix!" },
+    { title: "B. Schniepp" },
+    {
+      name: "description",
+      content:
+        "Über zehn Jahre Erfahrung in der Gebäudeautomation, hobbymässige Web- und Appentwicklung und begeisterter Boulderer.",
+    },
   ];
 };
 
 export default function Index() {
   return (
-    <main className="font-sans w-full min-h-screen bg-gray-100 flex flex-col justify-center">
-      <div className="mx-auto max-w-2xl p-2">
+    <main>
+      <InfoCard />
+    </main>
+  );
+}
+
+function InfoCard() {
+  return (
+    <div className="font-sans w-full min-h-screen flex flex-col justify-center">
+      <div className="mx-auto max-w-2xl p-2 relative">
         <div className="shadow-xl bg-white rounded-t-2xl px-14 pt-10 pb-8 flex flex-col gap-5">
           <img
             className="rounded-full max-w-28 max-h-28 border-2 border-cyan-900"
@@ -84,6 +96,6 @@ export default function Index() {
           </ul>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
