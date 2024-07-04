@@ -43,6 +43,7 @@ COPY --from=production-deps /myapp/node_modules /myapp/node_modules
 
 COPY --from=build /myapp/build/server /myapp/build/server
 COPY --from=build /myapp/build/client /myapp/build/client
+COPY --from=build /myapp/server.js /myapp/server.js
 COPY --from=build /myapp/package.json /myapp/package.json
 
 CMD [ "npm", "start" ]
